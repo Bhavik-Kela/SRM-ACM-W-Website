@@ -34,6 +34,14 @@
             line-height: 1.6;
         }
 
+        #gallery,
+#home,
+#about,
+#events,
+#team {
+    scroll-margin-top: 1rem;
+}
+
         /* Background Effects */
         .background-container {
             position: fixed;
