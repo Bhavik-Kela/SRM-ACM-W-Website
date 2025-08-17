@@ -874,14 +874,14 @@
     width: 100%;
     height: auto;
     max-width: 100%;
-    object-fit: cover; /* or 'contain' depending on your preference */
-    border-radius: 8px; /* optional: adds rounded corners */
-    transition: transform 0.3s ease; /* optional: smooth hover effect */
+    object-fit: cover; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease; 
 }
 
-/* For specific aspect ratio control (optional) */
+
 .coding-animation {
-    aspect-ratio: 16/9; /* adjust this ratio as needed */
+    aspect-ratio: 16/9; 
 }
 
 .coding-animation img {
@@ -893,11 +893,11 @@
 /* Mobile optimizations */
 @media (max-width: 768px) {
     .about-visual {
-        margin: 0 10px; /* Add some margin on mobile */
+        margin: 0 10px; 
     }
     
     .coding-animation img {
-        border-radius: 4px; /* Smaller border radius on mobile */
+        border-radius: 4px; 
     }
 }
 
@@ -910,14 +910,14 @@
 /* Tablet optimizations */
 @media (min-width: 769px) and (max-width: 1024px) {
     .coding-animation img {
-        max-height: 400px; /* Prevent images from being too large on tablets */
+        max-height: 400px; 
     }
 }
 
 /* Desktop optimizations */
 @media (min-width: 1025px) {
     .coding-animation img {
-        max-height: 500px; /* Control maximum height on desktop */
+        max-height: 500px; 
     }
 }
 
@@ -954,7 +954,7 @@
             50% { opacity: 1; transform: scaleX(1); }
         }
 
-        /* ===== WHY JOIN SECTION - FIXED BENEFITS LAYOUT ===== */
+        /* ===== WHY JOIN SECTION ===== */
         .why-join {
             background: radial-gradient(ellipse at center, rgba(200, 162, 200, 0.05) 0%, transparent 70%);
             min-height: 100vh;
@@ -1023,14 +1023,14 @@
             line-height: 1.6;
         }
 
-        /* ===== FIXED BENEFITS GRID LAYOUT ===== */
+        /* ===== BENEFITS GRID LAYOUT ===== */
         .benefits-flow {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: clamp(1.5rem, 3vw, 2rem);
             position: relative;
             z-index: 5;
-            align-items: stretch; /* Ensure all cards have equal height */
+            align-items: stretch; 
         }
 
         .benefit-flow-card {
@@ -1047,7 +1047,6 @@
             overflow: hidden;
             animation: flowCardSlide 1s ease-out var(--delay) both;
             transform-origin: left center;
-            /* Fixed height to ensure perfect alignment */
             min-height: 180px;
             height: auto;
         }
@@ -1211,7 +1210,7 @@
                 opacity: 0.2;
             }
         }
-        /* ===== EVENTS SECTION - ENHANCED MOBILE SLIDER ===== */
+        /* ===== EVENTS SECTION ===== */
         .events {
             background: var(--gradient-3);
         }
@@ -1297,7 +1296,7 @@
             }
         }
 
-        /* ===== ENHANCED MOBILE-FRIENDLY SLIDER CONTAINER ===== */
+       
         .events-slider-container {
             position: relative;
             width: 100%;
@@ -1359,7 +1358,7 @@
             box-shadow: none;
         }
 
-        /* ===== ENHANCED DOTS INDICATOR ===== */
+        /* ===== DOTS INDICATOR ===== */
         .slider-dots {
             display: flex;
             justify-content: center;
@@ -1398,7 +1397,6 @@
             position: relative;
             overflow: hidden;
             perspective: 1000px;
-            /* Responsive card sizing */
             min-width: clamp(240px, 70vw, 380px);
             max-width: 380px;
             height: clamp(360px, 45vw, 480px);
@@ -1592,7 +1590,7 @@
             text-align: center;
         }
 
-        /* ===== TEAM SECTION - ENHANCED FOR UNLIMITED MEMBERS ===== */
+        /* ===== TEAM SECTION ===== */
         .team {
             background: rgba(15, 15, 35, 0.3);
         }
@@ -1730,7 +1728,7 @@
             background: #333;
         }
 
-        /* ===== GALLERY SECTION - ENHANCED FOR UNLIMITED ITEMS ===== */
+        /* ===== GALLERY SECTION ===== */
         .gallery {
             background: rgba(15, 15, 35, 0.7);
         }
@@ -1869,13 +1867,9 @@
             position: relative;
             z-index: 100;
             
-            /* Ensure visibility with flexible padding */
             padding: clamp(2rem, 5vh, 4rem) clamp(1rem, 4vw, 3rem) clamp(1.5rem, 3vh, 2.5rem);
-            
-            /* Minimum height that adapts to viewport */
             min-height: clamp(180px, 25vh, 350px);
             
-            /* Flexbox for perfect centering */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2410,7 +2404,6 @@
             .footer {
                 padding: 1.5rem 0.75rem 1.25rem;
                 min-height: 220px;
-                /* Additional visibility insurance */
                 display: flex !important;
                 visibility: visible !important;
             }
@@ -2446,7 +2439,7 @@
             }
         }
 
-        /* Landscape orientation fixes */
+        /* Landscape orientation */
         @media (max-height: 500px) and (orientation: landscape) {
             .hero {
                 min-height: 100vh;
@@ -2489,7 +2482,7 @@
             }
         }
 
-        /* iPad and tablet specific fixes */
+        /* iPad and tablet specific=*/
         @media (min-width: 768px) and (max-width: 1024px) {
             .hero {
                 padding: clamp(1.5rem, 3vw, 2.5rem);
@@ -2518,7 +2511,6 @@
             }
         }
 
-        /* Fix for very wide screens */
         @media (min-width: 1920px) {
             .container {
                 max-width: 1800px;
@@ -2533,7 +2525,6 @@
             }
         }
 
-        /* Footer visibility fix */
         .footer .btn {
             margin-top: clamp(0.5rem, 2vw, 1rem);
             display: inline-block;

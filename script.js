@@ -43,13 +43,13 @@
             }
         });
 
-        // ===== ENHANCED EVENTS SLIDER FUNCTIONALITY =====
+        // ===== EVENTS SLIDER FUNCTIONALITY =====
         const currentSlide = {
             upcoming: 0,
             past: 0,
         }
 
-        // Dynamic cards per view based on screen size
+
         function getCardsPerView() {
             if (window.innerWidth <= 480) return 1;
             if (window.innerWidth <= 768) return 1;
@@ -183,7 +183,6 @@
             }
         }
 
-        // Enhanced window resize handler
         window.addEventListener("resize", () => {
             Object.keys(currentSlide).forEach((tabName) => {
                 if (document.getElementById(`${tabName}-slider`)) {
@@ -219,7 +218,7 @@
             resetSliderOnTabChange()
         })
 
-        // Enhanced touch/swipe support
+        // Touch/swipe support
         let touchStartX = 0
         let touchEndX = 0
 
@@ -450,7 +449,7 @@
             }
         });
 
-        // Performance optimization: throttle scroll events
+        // Performance optimization 
         let ticking = false;
         function updateOnScroll() {
             ticking = false;
