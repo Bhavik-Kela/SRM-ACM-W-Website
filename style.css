@@ -237,7 +237,7 @@
 
         .logo-image {
             width: 100%;
-            height: 100%;
+            height: 200%;
             object-fit: contain;
             filter: drop-shadow(0 10px 30px rgba(200, 162, 200, 0.3));
             animation: logoGlow 4s ease-in-out infinite 2s;
@@ -282,9 +282,10 @@
             font-family: 'Space Grotesk', sans-serif;
             font-size: clamp(1.8rem, 4vw, 4rem);
             font-weight: 800;
-            margin-bottom: 2rem;
+            margin-bottom: 0rem;
             overflow: hidden;
-            margin-top: 1rem;
+            position: relative;
+            top: 3rem;
         }
 
         .letter {
@@ -326,59 +327,7 @@
                 transform: translateY(0) rotateX(0deg);
             }
         }
-
-        .enter-btn {
-            background: var(--glass);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            color: var(--text-primary);
-            padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem);
-            border-radius: 50px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: clamp(0.9rem, 2vw, 1.1rem);
-            cursor: pointer;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: buttonFadeIn 0.8s ease-out 3.5s forwards;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .enter-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-1);
-            transition: left 0.5s ease;
-            z-index: -1;
-        }
-
-        .enter-btn:hover::before {
-            left: 0;
-        }
-
-        .enter-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(230, 230, 250, 0.3);
-            border-color: var(--pink);
-        }
-
-        @keyframes buttonFadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+        
         /* Navigation */
         .navbar {
             position: fixed;
@@ -620,7 +569,6 @@
         /* Hero Section */
         .hero {
             margin-top: clamp(60px, 10vw, 80px);
-            height: 100vh;
             min-height: clamp(600px, 100vh, 800px);
             display: flex;
             align-items: center;
@@ -1977,7 +1925,6 @@
             .hero{
                 margin-top: clamp(60px, 8vw, 70px);
                 min-height: clamp(500px, 80vh, 700px);
-                height: auto;
                 padding: clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem);
             }
             
@@ -2124,7 +2071,6 @@
         @media (max-width: 480px) {
             .hero{
                 margin-top: clamp(55px, 8vw, 65px);
-                min-height: clamp(450px, 75vh, 600px);
                 padding: clamp(1rem, 4vw, 2rem) clamp(1rem, 4vw, 1.5rem);
             }
 
@@ -2482,35 +2428,6 @@
             }
         }
 
-        /* iPad and tablet specific=*/
-        @media (min-width: 768px) and (max-width: 1024px) {
-            .hero {
-                padding: clamp(1.5rem, 3vw, 2.5rem);
-            }
-
-            .benefits-flow {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .event-card {
-                min-width: clamp(280px, 40vw, 350px);
-                height: clamp(400px, 45vw, 450px);
-            }
-
-            .team-card {
-                min-width: clamp(250px, 35vw, 300px);
-            }
-
-            .gallery-item {
-                min-width: clamp(250px, 40vw, 320px);
-                height: clamp(280px, 45vw, 380px);
-            }
-
-            .footer {
-                padding: clamp(2.5rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 2.5rem) clamp(2rem, 3vw, 2.5rem);
-            }
-        }
-
         @media (min-width: 1920px) {
             .container {
                 max-width: 1800px;
@@ -2546,4 +2463,10 @@
             min-width: clamp(140px, 30vw, 200px);
             white-space: nowrap;
         }
-    
+
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+    .intro-screen {
+        height: 60vh;
+       
+}
+}
