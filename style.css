@@ -1158,106 +1158,155 @@
                 opacity: 0.2;
             }
         }
-        /* ===== EVENTS SECTION ===== */
-        .events {
-            background: var(--gradient-3);
-        }
+   /* ===== EVENTS SECTION ===== */
+.events {
+    background: var(--gradient-3);
+}
 
-        .events-tabs {
-            display: flex;
-            justify-content: center;
-            gap: clamp(0.5rem, 3vw, 2rem);
-            margin-bottom: clamp(2rem, 4vw, 3rem);
-            border-bottom: 1px solid var(--glass-border);
-            flex-wrap: wrap;
-        }
+.events-tabs {
+    display: flex;
+    justify-content: center;
+    gap: clamp(0.5rem, 3vw, 2rem);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--glass-border);
+    flex-wrap: wrap;
+}
 
-        .tab-button {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            font-family: "Poppins", sans-serif;
-            font-size: clamp(0.9rem, 2vw, 1.3rem);
-            font-weight: 600;
-            padding: clamp(0.8rem, 2vw, 1.5rem) clamp(1rem, 3vw, 2rem);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            border-radius: 10px 10px 0 0;
-        }
+.tab-button {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    font-weight: 600;
+    padding: clamp(0.8rem, 2vw, 1.5rem) clamp(1rem, 3vw, 2rem);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+}
 
-        .tab-button.active {
-            color: var(--pink);
-            background: var(--glass);
-            backdrop-filter: blur(20px);
-        }
+.tab-button.active {
+    color: var(--pink);
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+}
 
-        .tab-button::after {
-            content: "";
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: var(--gradient-1);
-            transition: width 0.3s ease;
-        }
+.tab-button::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--gradient-1);
+    transition: width 0.3s ease;
+}
 
-        .tab-button.active::after {
-            width: 100%;
-        }
+.tab-button.active::after {
+    width: 100%;
+}
 
-        .tab-button:hover {
-            color: var(--text-secondary);
-            transform: translateY(-2px);
-        }
+.tab-button:hover {
+    color: var(--text-secondary);
+    transform: translateY(-2px);
+}
 
-        .tab-content {
-            display: none;
-            animation: tabFadeIn 0.5s ease-out;
-        }
+.tab-content {
+    display: none;
+    animation: tabFadeIn 0.5s ease-out;
+}
 
-        .tab-content.active {
-            display: block;
-        }
+.tab-content.active {
+    display: block;
+}
 
-        .no-events {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: clamp(2rem, 4vw, 4rem);
-        }
+.no-events {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(2rem, 4vw, 4rem);
+}
 
-        .no-events h3 {
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            color: var(--text-muted);
-        }
+.no-events h3 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: var(--text-muted);
+}
 
-        @keyframes tabFadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+@keyframes tabFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-       
-        .events-slider-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            padding: 0 clamp(40px, 8vw, 60px);
-        }
+.events-slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 40px);
+}
 
-        .events-slider {
-            display: flex;
-            gap: clamp(1rem, 3vw, 2rem);
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            width: fit-content;
-        }
+.events-slider-wrapper {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.events-slider {
+    display: flex;
+    gap: clamp(1rem, 3vw, 2rem);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    align-items: center;
+    min-width: 100%;
+}
+
+/* Only center upcoming events when there are few cards */
+#upcoming-slider {
+    justify-content: center;
+}
+
+#upcoming-slider[data-card-count="1"],
+#upcoming-slider[data-card-count="2"] {
+    justify-content: center;
+}
+
+/* Past events should always align to the left/start */
+#past-slider {
+    justify-content: flex-start;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .events-slider-container {
+        padding: 0 10px;
+    }
+    
+    .events-slider {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    
+    /* Only center upcoming events on mobile when there's 1 card */
+    #upcoming-slider[data-card-count="1"] {
+        justify-content: center;
+    }
+    
+    /* Past events stay left-aligned on mobile */
+    #past-slider {
+        justify-content: flex-start;
+    }
+}
 
         /* ===== RESPONSIVE SLIDER NAVIGATION ===== */
         .slider-nav {
