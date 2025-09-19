@@ -1158,7 +1158,7 @@
                 opacity: 0.2;
             }
         }
-  /* ===== EVENTS SECTION ===== */
+/* ===== EVENTS SECTION ===== */
 .events {
     background: var(--gradient-3);
 }
@@ -1286,15 +1286,46 @@
     justify-content: flex-start;
 }
 
+/* VIEWPORT LOCK - Prevent zoom and make layout static */
+html {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    min-width: 320px;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent horizontal scroll on all elements */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 /* For mobile responsiveness */
 @media (max-width: 768px) {
+    /* Ensure no element exceeds viewport width */
+    html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    
     .events-slider-container {
         padding: 0 10px;
+        max-width: 100vw;
+        box-sizing: border-box;
     }
     
     .events-slider {
         flex-wrap: nowrap;
         justify-content: flex-start;
+        max-width: calc(100vw - 20px);
     }
     
     /* On mobile, all sliders (including upcoming) should align left */
@@ -1306,13 +1337,28 @@
         justify-content: flex-start;
     }
     
-    /* Ensure cards take proper width on mobile */
+    /* Ensure cards take proper width on mobile - use safer calculations */
     .event-card {
         flex-shrink: 0;
-        width: calc(100vw - 80px); /* Full width minus padding and nav buttons */
-        max-width: 300px;
+        width: min(calc(100vw - 80px), 280px);
+        max-width: 280px;
+        min-width: 250px;
+    }
+    
+    /* Prevent any container from exceeding viewport */
+    .container,
+    .hero-content,
+    .nav-content,
+    .about-content,
+    .benefits-wave-container,
+    .footer-content {
+        max-width: 100vw;
+        padding-left: max(10px, 3vw);
+        padding-right: max(10px, 3vw);
+        box-sizing: border-box;
     }
 }
+
         /* ===== RESPONSIVE SLIDER NAVIGATION ===== */
         .slider-nav {
             position: absolute;
