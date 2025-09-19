@@ -1158,7 +1158,7 @@
                 opacity: 0.2;
             }
         }
-   /* ===== EVENTS SECTION ===== */
+  /* ===== EVENTS SECTION ===== */
 .events {
     background: var(--gradient-3);
 }
@@ -1271,7 +1271,7 @@
     min-width: 100%;
 }
 
-/* Only center upcoming events when there are few cards */
+/* Only center upcoming events when there are few cards - DESKTOP ONLY */
 #upcoming-slider {
     justify-content: center;
 }
@@ -1297,17 +1297,22 @@
         justify-content: flex-start;
     }
     
-    /* Only center upcoming events on mobile when there's 1 card */
-    #upcoming-slider[data-card-count="1"] {
-        justify-content: center;
+    /* On mobile, all sliders (including upcoming) should align left */
+    #upcoming-slider {
+        justify-content: flex-start !important;
     }
     
-    /* Past events stay left-aligned on mobile */
     #past-slider {
         justify-content: flex-start;
     }
+    
+    /* Ensure cards take proper width on mobile */
+    .event-card {
+        flex-shrink: 0;
+        width: calc(100vw - 80px); /* Full width minus padding and nav buttons */
+        max-width: 300px;
+    }
 }
-
         /* ===== RESPONSIVE SLIDER NAVIGATION ===== */
         .slider-nav {
             position: absolute;
