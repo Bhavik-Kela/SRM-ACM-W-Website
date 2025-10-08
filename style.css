@@ -21,7 +21,7 @@
     --text-muted: rgba(255, 255, 255, 0.6);
 
 
-/* Event Banner*/
+/* Event Banner
 
      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -41,7 +41,7 @@
   --yellow-glow: #ffcf33;
   --acm-purple: #8e44ad;
   --electric-blue: #00bfff;
-  --soft-white: #f5f5f5;
+  --soft-white: #f5f5f5; */
     
 }
 
@@ -1790,7 +1790,7 @@ body {
 }
 
 .register-btn-makeathon:hover {
-    cursor: pointer;
+    cursor: not-allowed;
     text-decoration: none;
     color: #2a2d2f;
     outline: none;
@@ -2775,7 +2775,7 @@ Footer button responsive .footer .btn {
     }
 }
 /*
-EVENT BANNER*/
+EVENT BANNER
 
 a {
   font-weight: 500;
@@ -2853,7 +2853,7 @@ button:focus-visible {
 
 /* ===============================================
    NAVBAR SPACE (Simulated - 20vh)
-   =============================================== */
+   =============================================== 
 
 .navbar-space {
   height: 8vh;
@@ -2867,7 +2867,7 @@ button:focus-visible {
 
 /* ===============================================
    THUNDER REVEAL SECTION (80vh below navbar)
-   =============================================== */
+   =============================================== 
 
 .thunder-section {
   position: relative;
@@ -2888,7 +2888,7 @@ button:focus-visible {
   }
 }
 
-/* Background Image */
+/* Background Image 
 .thunder-bg {
   position: absolute;
   top: 0;
@@ -2902,7 +2902,7 @@ button:focus-visible {
   transform: scale(1.05);
 }
 
-/* Dark Overlay */
+/* Dark Overlay 
 .thunder-overlay {
   position: absolute;
   top: 0;
@@ -2917,7 +2917,7 @@ button:focus-visible {
   z-index: 1;
 }
 
-/* Lightning Flash Effect - Realistic Thunder */
+/* Lightning Flash Effect - Realistic Thunder 
 .lightning-flash {
   position: absolute;
   top: 0;
@@ -2970,7 +2970,7 @@ button:focus-visible {
   }
 }
 
-/* Mist Overlay */
+/* Mist Overlay 
 .mist-overlay {
   position: absolute;
   top: 0;
@@ -2998,7 +2998,7 @@ button:focus-visible {
   }
 }
 
-/* Fog at Bottom */
+/* Fog at Bottom 
 .fog-bottom {
   position: absolute;
   bottom: 0;
@@ -3028,7 +3028,7 @@ button:focus-visible {
   }
 }
 
-/* Content - Revealed by Thunder */
+/* Content - Revealed by Thunder 
 .thunder-content {
   position: absolute;
   top: 0;
@@ -3056,7 +3056,7 @@ button:focus-visible {
   }
 }
 
-/* Presents Text */
+/* Presents Text 
 .presents-text {
   font-family: 'Poppins', sans-serif;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
@@ -3079,7 +3079,7 @@ button:focus-visible {
   }
 }
 
-/* Event Title */
+/* Event Title 
 .event-title {
   font-family: 'Creepster', 'Orbitron', cursive, sans-serif;
   font-size: clamp(3.5rem, 12vw, 9rem);
@@ -3114,7 +3114,7 @@ button:focus-visible {
   }
 }
 
-/* Register Button */
+/* Register Button 
 .register-btn-eventbanner {
   display: inline-block;
   padding: 20px 60px;
@@ -3157,7 +3157,7 @@ button:focus-visible {
   }
 }
 
-/* Button Shine Effect */
+/* Button Shine Effect 
 .register-btn-eventbanner::before {
   content: '';
   position: absolute;
@@ -3178,7 +3178,7 @@ button:focus-visible {
   left: 100%;
 }
 
-/* Button Hover State */
+/* Button Hover State 
 .register-btn-eventbanner:hover {
   transform: translateY(-5px) scale(1.08);
   border-color: var(--electric-blue);
@@ -3197,7 +3197,7 @@ button:focus-visible {
 
 /* ===============================================
    RESPONSIVE DESIGN
-   =============================================== */
+   =============================================== 
 
 @media (max-width: 1024px) {
   .event-title {
@@ -3298,7 +3298,7 @@ button:focus-visible {
 
 /* ===============================================
    ACCESSIBILITY & PERFORMANCE
-   =============================================== */
+   =============================================== 
 
 @media (prefers-reduced-motion: reduce) {
   * {
