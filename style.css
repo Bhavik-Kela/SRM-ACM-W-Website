@@ -1790,7 +1790,7 @@ body {
 }
 
 .register-btn-makeathon:hover {
-    cursor: not-allowed;
+    cursor: pointer;
     text-decoration: none;
     color: #2a2d2f;
     outline: none;
